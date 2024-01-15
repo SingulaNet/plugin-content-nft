@@ -1,0 +1,7 @@
+/node_modules/
+/coverage/
+/examples/
+/build/
+npm-debug.log
+.DS_Store
+test.js*
