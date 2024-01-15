@@ -88,7 +88,7 @@ class PluginContentNft extends EventEmitter2 {
             } else {
               this.provider = this._primaryProvider;
             }
-            const provider = createWebsocketProvider(this.provider);
+            const provider = new WebSocketProvider(this.provider);
             provider.on("connect", () => {
               this.connect();
             })
@@ -103,7 +103,7 @@ class PluginContentNft extends EventEmitter2 {
           this.provider = this._primaryProvider;
         }
         debug("Attempting to reconnect... " + this.provider);
-        const provider = createWebsocketProvider(this.provider);
+        const provider = new WebSocketProvider(this.provider);
         provider.on("connect", () => {
           this.connect();
         })
