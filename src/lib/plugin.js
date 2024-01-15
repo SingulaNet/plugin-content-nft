@@ -114,33 +114,13 @@ class PluginContentNft extends EventEmitter2 {
   async sendSignedTransaction(serializedTx) {
     return new Promise((resolve, reject) => {
       this.web3.eth.sendSignedTransaction(serializedTx)
-      .on("confirmation", (confirmationNumber, receipt) => {
-        if (confirmationNumber === 1) {
-          resolve(receipt.transactionHash);
-        }
+      .on("receipt", (receipt) => {
+        resolve(receipt);
       })
       .on("error", (error) =>  {
         console.error;
         reject(error);
       })
-    });
-  }
-
-  getTransactionReceipt(transactionHash) {
-    return new Promise((resolve) => {
-      this.web3.eth.getTransactionReceipt(transactionHash, (error, receipt) => {
-        if (error) {
-          resolve(false);
-        } else {
-          if (receipt) {
-            console.log('Transaction is confirmed', receipt);
-            resolve(receipt);
-          } else {
-            console.log('Transaction is not yet confirmed');
-            resolve(false);
-          }
-        }
-      });
     });
   }
 
@@ -156,6 +136,9 @@ class PluginContentNft extends EventEmitter2 {
           console.error(error);
           resolve();
         }
+      })
+      .then((events) => {
+        resolve(events);
       });
     });
   }
