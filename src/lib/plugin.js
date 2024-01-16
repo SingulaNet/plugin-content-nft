@@ -167,10 +167,8 @@ class PluginContentNft extends EventEmitter2 {
 
     return new Promise((resolve, reject) => {
       this.web3.eth.sendSignedTransaction("0x" + Buffer.from(serializedTx).toString("hex"))
-        .on("confirmation", (confirmationNumber, receipt) => {
-          if (confirmationNumber === 1) {
-            resolve(receipt.transactionHash);
-          }
+        .on("receipt", (receipt) => {
+          resolve(receipt);
         })
         .on("error", (error) => {
           console.error;
