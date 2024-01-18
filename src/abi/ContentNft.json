@@ -1,1270 +1,1270 @@
 [
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "publisherName",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "production",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "symbol",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "approved",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "Approval",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "operator",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "bool",
-          "name": "approved",
-          "type": "bool"
-        }
-      ],
-      "name": "ApprovalForAll",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "contentId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "contentName",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "tags",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "fileType",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "creators",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "performers",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "rightsHolders",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "copyrights",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "publishDate",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "referenceIds",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "informations",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "contentUri",
-          "type": "string"
-        },
-        {
-          "components": [
-            {
-              "internalType": "string",
-              "name": "start",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "end",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "regions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string",
-              "name": "useOf",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "restrictions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "uint8",
-              "name": "royalty",
-              "type": "uint8"
-            }
-          ],
-          "indexed": false,
-          "internalType": "struct ContentNft.ContentUse",
-          "name": "visualAudio",
-          "type": "tuple"
-        },
-        {
-          "components": [
-            {
-              "internalType": "string",
-              "name": "start",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "end",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "regions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string",
-              "name": "useOf",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "restrictions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "uint8",
-              "name": "royalty",
-              "type": "uint8"
-            }
-          ],
-          "indexed": false,
-          "internalType": "struct ContentNft.ContentUse[]",
-          "name": "variousUse",
-          "type": "tuple[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "salesStart",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "salesEnd",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "markets",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "bool",
-          "name": "secondaryDistribution",
-          "type": "bool"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "secondaryStart",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "secondaryEnd",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "resaleMarkets",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "secondaryAgreements",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "secondaryRestrictions",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint8",
-          "name": "resaleRoyalty",
-          "type": "uint8"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "disclaimers",
-          "type": "string[]"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "totalSupplyLimit",
-          "type": "uint256"
-        }
-      ],
-      "name": "DesignLog",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "contentId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "serialNo",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "contentUri",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string[]",
-          "name": "informations",
-          "type": "string[]"
-        }
-      ],
-      "name": "MintLog",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "previousOwner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "OwnershipTransferred",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "Transfer",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_tokenId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "string",
-          "name": "_information",
-          "type": "string"
-        }
-      ],
-      "name": "addTokenInfomation",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "approve",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        }
-      ],
-      "name": "balanceOf",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string[]",
-          "name": "_contentName",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_tags",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string",
-          "name": "_fileType",
-          "type": "string"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_creators",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_performers",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_rightsHolders",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string",
-          "name": "_copyrights",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_publishDate",
-          "type": "string"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_referenceIds",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_informations",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string",
-          "name": "_contentUri",
-          "type": "string"
-        },
-        {
-          "components": [
-            {
-              "internalType": "string",
-              "name": "start",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "end",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "regions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string",
-              "name": "useOf",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "restrictions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "uint8",
-              "name": "royalty",
-              "type": "uint8"
-            }
-          ],
-          "internalType": "struct ContentNft.ContentUse",
-          "name": "_visualAudio",
-          "type": "tuple"
-        },
-        {
-          "components": [
-            {
-              "internalType": "string",
-              "name": "start",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "end",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "regions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string",
-              "name": "useOf",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "restrictions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "uint8",
-              "name": "royalty",
-              "type": "uint8"
-            }
-          ],
-          "internalType": "struct ContentNft.ContentUse[]",
-          "name": "_variousUse",
-          "type": "tuple[]"
-        },
-        {
-          "internalType": "string",
-          "name": "_salesStart",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_salesEnd",
-          "type": "string"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_markets",
-          "type": "string[]"
-        },
-        {
-          "internalType": "bool",
-          "name": "_secondaryDistribution",
-          "type": "bool"
-        },
-        {
-          "internalType": "string",
-          "name": "_secondaryStart",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_secondaryEnd",
-          "type": "string"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_resaleMarkets",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_secondaryAgreements",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_secondaryRestrictions",
-          "type": "string[]"
-        },
-        {
-          "internalType": "uint8",
-          "name": "_resaleRoyalty",
-          "type": "uint8"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_disclaimers",
-          "type": "string[]"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_totalSupplyLimit",
-          "type": "uint256"
-        }
-      ],
-      "name": "design",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "getApproved",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_contentId",
-          "type": "uint256"
-        }
-      ],
-      "name": "getContent",
-      "outputs": [
-        {
-          "components": [
-            {
-              "internalType": "string[]",
-              "name": "contentName",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string[]",
-              "name": "tags",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string",
-              "name": "fileType",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "creators",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string[]",
-              "name": "performers",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string[]",
-              "name": "rightsHolders",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string",
-              "name": "copyrights",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "publishDate",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "referenceIds",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string[]",
-              "name": "informations",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string",
-              "name": "contentUri",
-              "type": "string"
-            },
-            {
-              "components": [
-                {
-                  "internalType": "string",
-                  "name": "start",
-                  "type": "string"
-                },
-                {
-                  "internalType": "string",
-                  "name": "end",
-                  "type": "string"
-                },
-                {
-                  "internalType": "string[]",
-                  "name": "regions",
-                  "type": "string[]"
-                },
-                {
-                  "internalType": "string",
-                  "name": "useOf",
-                  "type": "string"
-                },
-                {
-                  "internalType": "string[]",
-                  "name": "restrictions",
-                  "type": "string[]"
-                },
-                {
-                  "internalType": "uint8",
-                  "name": "royalty",
-                  "type": "uint8"
-                }
-              ],
-              "internalType": "struct ContentNft.ContentUse",
-              "name": "visualAudio",
-              "type": "tuple"
-            },
-            {
-              "components": [
-                {
-                  "internalType": "string",
-                  "name": "start",
-                  "type": "string"
-                },
-                {
-                  "internalType": "string",
-                  "name": "end",
-                  "type": "string"
-                },
-                {
-                  "internalType": "string[]",
-                  "name": "regions",
-                  "type": "string[]"
-                },
-                {
-                  "internalType": "string",
-                  "name": "useOf",
-                  "type": "string"
-                },
-                {
-                  "internalType": "string[]",
-                  "name": "restrictions",
-                  "type": "string[]"
-                },
-                {
-                  "internalType": "uint8",
-                  "name": "royalty",
-                  "type": "uint8"
-                }
-              ],
-              "internalType": "struct ContentNft.ContentUse[]",
-              "name": "variousUse",
-              "type": "tuple[]"
-            },
-            {
-              "internalType": "string",
-              "name": "salesStart",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "salesEnd",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "markets",
-              "type": "string[]"
-            },
-            {
-              "internalType": "bool",
-              "name": "secondaryDistribution",
-              "type": "bool"
-            },
-            {
-              "internalType": "string",
-              "name": "secondaryStart",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "secondaryEnd",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "resaleMarkets",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string[]",
-              "name": "secondaryAgreements",
-              "type": "string[]"
-            },
-            {
-              "internalType": "string[]",
-              "name": "secondaryRestrictions",
-              "type": "string[]"
-            },
-            {
-              "internalType": "uint8",
-              "name": "resaleRoyalty",
-              "type": "uint8"
-            },
-            {
-              "internalType": "string[]",
-              "name": "disclaimers",
-              "type": "string[]"
-            },
-            {
-              "internalType": "uint256",
-              "name": "totalSupplyLimit",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct ContentNft.Content",
-          "name": "",
-          "type": "tuple"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_owner",
-          "type": "address"
-        }
-      ],
-      "name": "getOwnedTokens",
-      "outputs": [
-        {
-          "internalType": "uint256[]",
-          "name": "",
-          "type": "uint256[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "getPublisherAddress",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "getPublisherName",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "getToken",
-      "outputs": [
-        {
-          "components": [
-            {
-              "internalType": "uint256",
-              "name": "contentId",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "serialNo",
-              "type": "uint256"
-            },
-            {
-              "internalType": "string",
-              "name": "contentUri",
-              "type": "string"
-            },
-            {
-              "internalType": "string[]",
-              "name": "informations",
-              "type": "string[]"
-            }
-          ],
-          "internalType": "struct ContentNft.Token",
-          "name": "",
-          "type": "tuple"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "operator",
-          "type": "address"
-        }
-      ],
-      "name": "isApprovedForAll",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "name",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "owner",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "ownerOf",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "renounceOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_contentId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "string",
-          "name": "_contentUri",
-          "type": "string"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_informations",
-          "type": "string[]"
-        }
-      ],
-      "name": "safeMint",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "safeTransferFrom",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes",
-          "name": "data",
-          "type": "bytes"
-        }
-      ],
-      "name": "safeTransferFrom",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "operator",
-          "type": "address"
-        },
-        {
-          "internalType": "bool",
-          "name": "approved",
-          "type": "bool"
-        }
-      ],
-      "name": "setApprovalForAll",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes4",
-          "name": "interfaceId",
-          "type": "bytes4"
-        }
-      ],
-      "name": "supportsInterface",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "symbol",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "index",
-          "type": "uint256"
-        }
-      ],
-      "name": "tokenByIndex",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "index",
-          "type": "uint256"
-        }
-      ],
-      "name": "tokenOfOwnerByIndex",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "tokenURI",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "totalSupply",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "transferFrom",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "transferOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }
-  ]
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "issuerName_",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "production_",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "symbol_",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "approved",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "Approval",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "approved",
+        "type": "bool"
+      }
+    ],
+    "name": "ApprovalForAll",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "contentId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "contentName",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "tags",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "fileType",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "creators",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "performers",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "rightsHolders",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "copyright",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "publishDate",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "referenceIds",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "details",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "contentUri",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "visualaudio",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "visualaudioUseStart",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "visualaudioUseEnd",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "visualaudioUse",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "visualaudioUseRegions",
+        "type": "string[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "useStart",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "userEnd",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "useRegions",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "useOf",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "useRestrictions",
+            "type": "string[]"
+          },
+          {
+            "internalType": "uint8",
+            "name": "useRoyalty",
+            "type": "uint8"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct ContentNft.ContentUse[]",
+        "name": "contentUse",
+        "type": "tuple[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "salesStart",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "salesEnd",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "markets",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "secondaryDistribution",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "secondaryStart",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "secondaryEnd",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "resaleMarkets",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "secondaryAgreements",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "secondaryRestrictions",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "resaleRoyalty",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "disclaimers",
+        "type": "string[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalSupplyLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "DesignLog",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "contentId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "serialNo",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "contentUri",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "nftInformation",
+        "type": "string[]"
+      }
+    ],
+    "name": "MintLog",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "Transfer",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "_information",
+        "type": "string"
+      }
+    ],
+    "name": "addNftInfomation",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "approve",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string[]",
+        "name": "_contentName",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_tags",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string",
+        "name": "_fileType",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_creators",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_performers",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_rightsHolders",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string",
+        "name": "_copyright",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_publishDate",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_referenceIds",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_details",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string",
+        "name": "_contentUri",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "_visualaudio",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "_visualaudioUseStart",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_visualaudioUseEnd",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_visualaudioUse",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_visualaudioUseRegions",
+        "type": "string[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "useStart",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "userEnd",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "useRegions",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "useOf",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "useRestrictions",
+            "type": "string[]"
+          },
+          {
+            "internalType": "uint8",
+            "name": "useRoyalty",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct ContentNft.ContentUse[]",
+        "name": "_contentUse",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "string",
+        "name": "_salesStart",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_salesEnd",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_markets",
+        "type": "string[]"
+      },
+      {
+        "internalType": "bool",
+        "name": "_secondaryDistribution",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "_secondaryStart",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_secondaryEnd",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_resaleMarkets",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_secondaryAgreements",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_secondaryRestrictions",
+        "type": "string[]"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_resaleRoyalty",
+        "type": "uint8"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_disclaimers",
+        "type": "string[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_totalSupplyLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "design",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getApproved",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_contentId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getContent",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string[]",
+            "name": "contentName",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "tags",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "fileType",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "creators",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "performers",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "rightsHolders",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "copyright",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "publishDate",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "referenceIds",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "details",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "contentUri",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "visualaudio",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "visualaudioUseStart",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "visualaudioUseEnd",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "visualaudioUse",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "visualaudioUseRegions",
+            "type": "string[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "useStart",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "userEnd",
+                "type": "string"
+              },
+              {
+                "internalType": "string[]",
+                "name": "useRegions",
+                "type": "string[]"
+              },
+              {
+                "internalType": "string",
+                "name": "useOf",
+                "type": "string"
+              },
+              {
+                "internalType": "string[]",
+                "name": "useRestrictions",
+                "type": "string[]"
+              },
+              {
+                "internalType": "uint8",
+                "name": "useRoyalty",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct ContentNft.ContentUse[]",
+            "name": "contentUse",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "string",
+            "name": "salesStart",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "salesEnd",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "markets",
+            "type": "string[]"
+          },
+          {
+            "internalType": "bool",
+            "name": "secondaryDistribution",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "secondaryStart",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "secondaryEnd",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "resaleMarkets",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "secondaryAgreements",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string[]",
+            "name": "secondaryRestrictions",
+            "type": "string[]"
+          },
+          {
+            "internalType": "uint8",
+            "name": "resaleRoyalty",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string[]",
+            "name": "disclaimers",
+            "type": "string[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalSupplyLimit",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ContentNft.Content",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      }
+    ],
+    "name": "getOwnedTokens",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getToken",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "contentId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "serialNo",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "contentUri",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "nftInformation",
+            "type": "string[]"
+          }
+        ],
+        "internalType": "struct ContentNft.Token",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      }
+    ],
+    "name": "isApprovedForAll",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "issuer",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "issuerName",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "name",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "nftOwner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ownerOf",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "production",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_contentId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "_contentUri",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_nftInformation",
+        "type": "string[]"
+      }
+    ],
+    "name": "safeMint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "safeTransferFrom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "safeTransferFrom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "approved",
+        "type": "bool"
+      }
+    ],
+    "name": "setApprovalForAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "symbol",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenByIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenOfOwnerByIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenURI",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferFrom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
