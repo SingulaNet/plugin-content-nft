@@ -111,6 +111,46 @@ class PluginContentNft extends EventEmitter2 {
     }, 5 * 1000);
   }
 
+  issuer() {
+    return new Promise(resolve => {
+      this.contract.methods.issuer().call().then(result => {
+        resolve(
+          { issuer: result }
+        );
+      });
+    });
+  }
+
+  getOwnedTokens(address) {
+    return new Promise(resolve => {
+      this.contract.methods.getOwnedTokens(address).call().then(result => {
+        resolve(
+          { ownedTokens: result }
+        );
+      });
+    });
+  }
+
+  getContent(contentId) {
+    return new Promise(resolve => {
+      this.contract.methods.getContent(contentId).call().then(result => {
+        resolve(
+          { content: result }
+        );
+      });
+    });
+  }
+
+  getToken(tokenId) {
+    return new Promise(resolve => {
+      this.contract.methods.getToken(tokenId).call().then(result => {
+        resolve(
+          { token: result }
+        );
+      });
+    });
+  }
+
   async sendSignedTransaction(serializedTx) {
     return new Promise((resolve, reject) => {
       this.web3.eth.sendSignedTransaction(serializedTx)
