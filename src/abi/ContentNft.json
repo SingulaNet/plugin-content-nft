@@ -100,13 +100,7 @@
       {
         "indexed": false,
         "internalType": "string[]",
-        "name": "creators",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "performers",
+        "name": "lelatedParties",
         "type": "string[]"
       },
       {
@@ -171,9 +165,9 @@
       },
       {
         "indexed": false,
-        "internalType": "string",
+        "internalType": "string[]",
         "name": "visualaudioUse",
-        "type": "string"
+        "type": "string[]"
       },
       {
         "indexed": false,
@@ -185,12 +179,17 @@
         "components": [
           {
             "internalType": "string",
+            "name": "useOf",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
             "name": "useStart",
             "type": "string"
           },
           {
             "internalType": "string",
-            "name": "userEnd",
+            "name": "useEnd",
             "type": "string"
           },
           {
@@ -200,7 +199,7 @@
           },
           {
             "internalType": "string",
-            "name": "useOf",
+            "name": "utility",
             "type": "string"
           },
           {
@@ -209,9 +208,9 @@
             "type": "string[]"
           },
           {
-            "internalType": "uint8",
+            "internalType": "uint256",
             "name": "useRoyalty",
-            "type": "uint8"
+            "type": "uint256"
           }
         ],
         "indexed": false,
@@ -275,9 +274,9 @@
       },
       {
         "indexed": false,
-        "internalType": "uint8",
+        "internalType": "uint256",
         "name": "resaleRoyalty",
-        "type": "uint8"
+        "type": "uint256"
       },
       {
         "indexed": false,
@@ -290,6 +289,12 @@
         "internalType": "uint256",
         "name": "totalSupplyLimit",
         "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string[]",
+        "name": "listPrice",
+        "type": "string[]"
       }
     ],
     "name": "DesignLog",
@@ -395,7 +400,7 @@
         "type": "string"
       }
     ],
-    "name": "addNftInfomation",
+    "name": "addNftInformation",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -456,12 +461,7 @@
       },
       {
         "internalType": "string[]",
-        "name": "_creators",
-        "type": "string[]"
-      },
-      {
-        "internalType": "string[]",
-        "name": "_performers",
+        "name": "_lelatedParties",
         "type": "string[]"
       },
       {
@@ -515,9 +515,9 @@
         "type": "string"
       },
       {
-        "internalType": "string",
+        "internalType": "string[]",
         "name": "_visualaudioUse",
-        "type": "string"
+        "type": "string[]"
       },
       {
         "internalType": "string[]",
@@ -528,12 +528,17 @@
         "components": [
           {
             "internalType": "string",
+            "name": "useOf",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
             "name": "useStart",
             "type": "string"
           },
           {
             "internalType": "string",
-            "name": "userEnd",
+            "name": "useEnd",
             "type": "string"
           },
           {
@@ -543,7 +548,7 @@
           },
           {
             "internalType": "string",
-            "name": "useOf",
+            "name": "utility",
             "type": "string"
           },
           {
@@ -552,9 +557,9 @@
             "type": "string[]"
           },
           {
-            "internalType": "uint8",
+            "internalType": "uint256",
             "name": "useRoyalty",
-            "type": "uint8"
+            "type": "uint256"
           }
         ],
         "internalType": "struct ContentNft.ContentUse[]",
@@ -607,9 +612,9 @@
         "type": "string[]"
       },
       {
-        "internalType": "uint8",
+        "internalType": "uint256",
         "name": "_resaleRoyalty",
-        "type": "uint8"
+        "type": "uint256"
       },
       {
         "internalType": "string[]",
@@ -620,6 +625,11 @@
         "internalType": "uint256",
         "name": "_totalSupplyLimit",
         "type": "uint256"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_listPrice",
+        "type": "string[]"
       }
     ],
     "name": "design",
@@ -675,12 +685,7 @@
           },
           {
             "internalType": "string[]",
-            "name": "creators",
-            "type": "string[]"
-          },
-          {
-            "internalType": "string[]",
-            "name": "performers",
+            "name": "lelatedParties",
             "type": "string[]"
           },
           {
@@ -734,9 +739,9 @@
             "type": "string"
           },
           {
-            "internalType": "string",
+            "internalType": "string[]",
             "name": "visualaudioUse",
-            "type": "string"
+            "type": "string[]"
           },
           {
             "internalType": "string[]",
@@ -747,12 +752,17 @@
             "components": [
               {
                 "internalType": "string",
+                "name": "useOf",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
                 "name": "useStart",
                 "type": "string"
               },
               {
                 "internalType": "string",
-                "name": "userEnd",
+                "name": "useEnd",
                 "type": "string"
               },
               {
@@ -762,7 +772,7 @@
               },
               {
                 "internalType": "string",
-                "name": "useOf",
+                "name": "utility",
                 "type": "string"
               },
               {
@@ -771,9 +781,9 @@
                 "type": "string[]"
               },
               {
-                "internalType": "uint8",
+                "internalType": "uint256",
                 "name": "useRoyalty",
-                "type": "uint8"
+                "type": "uint256"
               }
             ],
             "internalType": "struct ContentNft.ContentUse[]",
@@ -826,9 +836,9 @@
             "type": "string[]"
           },
           {
-            "internalType": "uint8",
+            "internalType": "uint256",
             "name": "resaleRoyalty",
-            "type": "uint8"
+            "type": "uint256"
           },
           {
             "internalType": "string[]",
@@ -839,6 +849,11 @@
             "internalType": "uint256",
             "name": "totalSupplyLimit",
             "type": "uint256"
+          },
+          {
+            "internalType": "string[]",
+            "name": "listPrice",
+            "type": "string[]"
           }
         ],
         "internalType": "struct ContentNft.Content",
