@@ -193,14 +193,14 @@
             "type": "string"
           },
           {
-            "internalType": "string[]",
-            "name": "useRegions",
-            "type": "string[]"
-          },
-          {
             "internalType": "string",
             "name": "utility",
             "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "useRegions",
+            "type": "string[]"
           },
           {
             "internalType": "string[]",
@@ -542,14 +542,14 @@
             "type": "string"
           },
           {
-            "internalType": "string[]",
-            "name": "useRegions",
-            "type": "string[]"
-          },
-          {
             "internalType": "string",
             "name": "utility",
             "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "useRegions",
+            "type": "string[]"
           },
           {
             "internalType": "string[]",
@@ -766,14 +766,14 @@
                 "type": "string"
               },
               {
-                "internalType": "string[]",
-                "name": "useRegions",
-                "type": "string[]"
-              },
-              {
                 "internalType": "string",
                 "name": "utility",
                 "type": "string"
+              },
+              {
+                "internalType": "string[]",
+                "name": "useRegions",
+                "type": "string[]"
               },
               {
                 "internalType": "string[]",
