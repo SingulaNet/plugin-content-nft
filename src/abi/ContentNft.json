@@ -78,223 +78,6 @@
         "internalType": "uint256",
         "name": "contentId",
         "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "contentName",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "tags",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "fileType",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "lelatedParties",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "rightsHolders",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "copyright",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "publishDate",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "referenceIds",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "details",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "thumbnailUri",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "contentUri",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "bool",
-        "name": "visualaudio",
-        "type": "bool"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "visualaudioUseStart",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "visualaudioUseEnd",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "visualaudioUse",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "visualaudioUseRegions",
-        "type": "string[]"
-      },
-      {
-        "components": [
-          {
-            "internalType": "string",
-            "name": "useOf",
-            "type": "string"
-          },
-          {
-            "internalType": "string",
-            "name": "useStart",
-            "type": "string"
-          },
-          {
-            "internalType": "string",
-            "name": "useEnd",
-            "type": "string"
-          },
-          {
-            "internalType": "string",
-            "name": "utility",
-            "type": "string"
-          },
-          {
-            "internalType": "string[]",
-            "name": "useRegions",
-            "type": "string[]"
-          },
-          {
-            "internalType": "string[]",
-            "name": "useRestrictions",
-            "type": "string[]"
-          },
-          {
-            "internalType": "uint256",
-            "name": "useRoyalty",
-            "type": "uint256"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct ContentNft.ContentUse[]",
-        "name": "contentUse",
-        "type": "tuple[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "salesStart",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "salesEnd",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "markets",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "bool",
-        "name": "secondaryDistribution",
-        "type": "bool"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "secondaryStart",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "secondaryEnd",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "resaleMarkets",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "secondaryAgreements",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "secondaryRestrictions",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "resaleRoyalty",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "disclaimers",
-        "type": "string[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "totalSupplyLimit",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "listPrice",
-        "type": "string[]"
       }
     ],
     "name": "DesignLog",
@@ -314,30 +97,6 @@
         "internalType": "uint256",
         "name": "tokenId",
         "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "contentId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "serialNo",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "contentUri",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string[]",
-        "name": "nftInformation",
-        "type": "string[]"
       }
     ],
     "name": "MintLog",
@@ -491,6 +250,11 @@
       },
       {
         "internalType": "string",
+        "name": "_paymentUseProhibition",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
         "name": "_thumbnailUri",
         "type": "string"
       },
@@ -542,19 +306,24 @@
             "type": "string"
           },
           {
+            "internalType": "string[]",
+            "name": "useRegions",
+            "type": "string[]"
+          },
+          {
             "internalType": "string",
             "name": "utility",
             "type": "string"
           },
           {
             "internalType": "string[]",
-            "name": "useRegions",
+            "name": "useRestrictions",
             "type": "string[]"
           },
           {
-            "internalType": "string[]",
-            "name": "useRestrictions",
-            "type": "string[]"
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
           },
           {
             "internalType": "uint256",
@@ -595,6 +364,11 @@
         "internalType": "string",
         "name": "_secondaryEnd",
         "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_secondaryRegions",
+        "type": "string[]"
       },
       {
         "internalType": "string[]",
@@ -715,6 +489,11 @@
           },
           {
             "internalType": "string",
+            "name": "paymentUseProhibition",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
             "name": "thumbnailUri",
             "type": "string"
           },
@@ -766,19 +545,24 @@
                 "type": "string"
               },
               {
+                "internalType": "string[]",
+                "name": "useRegions",
+                "type": "string[]"
+              },
+              {
                 "internalType": "string",
                 "name": "utility",
                 "type": "string"
               },
               {
                 "internalType": "string[]",
-                "name": "useRegions",
+                "name": "useRestrictions",
                 "type": "string[]"
               },
               {
-                "internalType": "string[]",
-                "name": "useRestrictions",
-                "type": "string[]"
+                "internalType": "uint256",
+                "name": "quantity",
+                "type": "uint256"
               },
               {
                 "internalType": "uint256",
@@ -819,6 +603,11 @@
             "internalType": "string",
             "name": "secondaryEnd",
             "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "secondaryRegions",
+            "type": "string[]"
           },
           {
             "internalType": "string[]",
@@ -1151,6 +940,24 @@
       }
     ],
     "name": "setApprovalForAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_value",
+        "type": "bool"
+      }
+    ],
+    "name": "setApprove",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
