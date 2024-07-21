@@ -119,6 +119,10 @@ class PluginContentNft extends EventEmitter2 {
     });
   }
 
+  getContract() {
+    return this.contract;
+  }
+
   issuer() {
     return new Promise(resolve => {
       this.contract.methods.issuer().call().then(result => {
