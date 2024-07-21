@@ -111,6 +111,14 @@ class PluginContentNft extends EventEmitter2 {
     }, 5 * 1000);
   }
 
+  getTransactionCount(address) {
+    return new Promise(resolve => {
+      this.web3.eth.getTransactionCount(address, "pending").then((nonce) => {
+        resolve(nonce);
+      });
+    });
+  }
+
   issuer() {
     return new Promise(resolve => {
       this.contract.methods.issuer().call().then(result => {
