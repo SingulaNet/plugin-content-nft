@@ -135,44 +135,59 @@ class PluginContentNft extends EventEmitter2 {
 
   getOwnedTokens(address) {
     return new Promise(resolve => {
-      this.contract.methods.getOwnedTokens(address).call().then(result => {
-        resolve(
-          { ownedTokens: result }
-        );
-      });
+      this.contract.methods.getOwnedTokens(address).call()
+        .then(result => {
+          resolve(
+            { ownedTokens: result }
+          );
+        })
+        .catch((error) => {
+          console.log(error);
+          resolve(null);
+        });
     });
   }
 
   getContent(contentId) {
     return new Promise(resolve => {
-      this.contract.methods.getContent(contentId).call().then(result => {
-        resolve(
-          { content: result }
-        );
-      });
+      this.contract.methods.getContent(contentId).call()
+        .then(result => {
+          resolve(
+            { content: result }
+          );
+        })
+        .catch((error) => {
+          console.log(error);
+          resolve(null);
+        });
     });
   }
 
   getToken(tokenId) {
     return new Promise(resolve => {
-      this.contract.methods.getToken(tokenId).call().then(result => {
-        resolve(
-          { token: result }
-        );
-      });
+      this.contract.methods.getToken(tokenId).call()
+        .then(result => {
+          resolve(
+            { token: result }
+          );
+        })
+        .catch((error) => {
+          console.log(error);
+          resolve(null);
+        });
     });
   }
 
   async sendSignedTransaction(serializedTx) {
     return new Promise((resolve, reject) => {
       this.web3.eth.sendSignedTransaction(serializedTx)
-      .on("receipt", (receipt) => {
-        resolve(receipt);
-      })
-      .on("error", (error) =>  {
-        console.error;
-        reject(error);
-      })
+        .on("receipt", (receipt) => {
+          resolve(receipt);
+        })
+        .on("error", (error) => {
+          console.error;
+          reject(error);
+        })
     });
   }
 
@@ -181,17 +196,14 @@ class PluginContentNft extends EventEmitter2 {
       this.contract.getPastEvents(eventName, {
         fromBlock,
         toBlock: 'latest',
-      }, (error, events) => {
-        if (!error) {
-         resolve(events);
-        } else {
-          console.error(error);
-          resolve();
-        }
       })
-      .then((events) => {
-        resolve(events);
-      });
+        .then((events) => {
+          resolve(events);
+        })
+        .catch((error) => {
+          console.error(error);
+          resolve(null);
+        });
     });
   }
 
