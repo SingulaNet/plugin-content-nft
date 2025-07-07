@@ -81,7 +81,9 @@ class PluginContentNft extends EventEmitter2 {
         this.web3.eth.net.isListening()
           .catch((e) => {
             debug("disconnected " + this.provider);
-            this.web3.currentProvider.disconnect();
+            if (this.web3 && this.web3.currentProvider) {
+              this.web3.currentProvider.disconnect();
+            }
             this.web3 = null;
             if (this.provider === this._primaryProvider) {
               this.provider = this._secondaryProvider;
