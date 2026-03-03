@@ -21,6 +21,7 @@ class PluginContentNft extends EventEmitter2 {
     this.contractAddress = opts.contractAddress;
     this.web3 = null;
     this.healthCheck = false;
+    this._heartbeatTimer = null;
   }
 
   async connect() {
@@ -65,12 +66,20 @@ class PluginContentNft extends EventEmitter2 {
 
   disconnect() {
     if (!this.web3) return;
+    if (this.contract) {
+      this.contract.removeAllListeners();
+    }
+    if (this._heartbeatTimer) {
+      clearInterval(this._heartbeatTimer);
+      this._heartbeatTimer = null;
+    }
     this.web3.currentProvider.disconnect();
     this.web3 = null;
+    this.contract = null;
   }
 
   _heartbeat() {
-    setInterval(() => {
+    this._heartbeatTimer = setInterval(() => {
       /**
        * Handle web socket disconnects
        * @see https://github.com/ethereum/web3.js/issues/1354
